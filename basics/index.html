@@ -173,10 +173,26 @@
 
 
 		<!-- x-bind id -->
-		<button 
+		<!-- <button 
 		x-data="{id: ''}"
 		:id="id"
-		@click="id = Math.round(Math.random() * 1000000)">Button</button>
+		@click="id = Math.round(Math.random() * 1000000)">Button</button> -->
+
+
+		<!-- Challenge -->
+		<div x-data="{colors: ['red', 'green', 'blue', 'yellow', 'brown', 'purple']}">
+			<!-- Iterate over colors and display 40x40 px boxes with given colors -->
+			<template x-for="color in colors">
+				<div 
+					style="width: 40px; height: 40px; display: inline-block;" 
+					x-bind:style="{backgroundColor: color}">
+				</div>
+			</template>
+		</div>
+
+
+
+
 	</body>
 
 </html>
