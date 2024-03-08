@@ -165,15 +165,18 @@
 
 
 		<!-- x-bind: style -->
-		<div x-data="{clicked: false}">
+		<!-- <div x-data="{clicked: false}">
 			<button style="color: green" x-bind:style="{backgroundColor: clicked ? 'red' : ''}" @click="clicked = !clicked">
 				Click me
 			</button>
-		</div>
+		</div> -->
 
 
-
-
+		<!-- x-bind id -->
+		<button 
+		x-data="{id: ''}"
+		:id="id"
+		@click="id = Math.round(Math.random() * 1000000)">Button</button>
 	</body>
 
 </html>
