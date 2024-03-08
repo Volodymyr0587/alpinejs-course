@@ -34,16 +34,21 @@
 		</div> -->
 
 		<!-- Re-usable data -->
-		<div x-data="dropdown">
+		<!-- <div x-data="dropdown">
 			<button @click="toggle">Open/Close</button>
 			<div x-show="open">
 				Dropdown content 1...
 			</div>
-		</div>
+		</div> -->
 
 		<!-- Data-Less components -->
-		<div x-data @click="alert('Data Less Components')">
+		<!-- <div x-data @click="alert('Data Less Components')">
 			Click me
+		</div> -->
+
+		<!-- Data coming from Store -->
+		<div x-data x-text="$store.currentUser.posts">
+			
 		</div>
 
 	</body>
