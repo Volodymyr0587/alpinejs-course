@@ -8,6 +8,7 @@
 			defer
 			src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.6/dist/cdn.min.js"
 		></script>
+		<script src="app.js"></script>
 	</head>
 
 	<body>
@@ -22,7 +23,7 @@
 		></div> -->
 
 		<!-- x-data with methods -->
-		<div
+		<!-- <div
 			x-data="{message: 'Click to change', 
           change(){
             this.message = 'Changed message'
@@ -30,6 +31,20 @@
     }"
 		>
 			<span x-text="message" @click="change()"></span>
+		</div> -->
+
+		<!-- Re-usable data -->
+		<div x-data="dropdown">
+			<button @click="toggle">Open/Close</button>
+			<div x-show="open">
+				Dropdown content 1...
+			</div>
 		</div>
+
+		<!-- Data-Less components -->
+		<div x-data @click="alert('Data Less Components')">
+			Click me
+		</div>
+
 	</body>
 </html>
