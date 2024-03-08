@@ -114,7 +114,7 @@
 		</div> -->
 
 		<!-- x-if -->
-		<div x-data="{
+		<!-- <div x-data="{
 			open: false,
 			toggle() {
 				this.open = !this.open
@@ -126,7 +126,23 @@
 					Content...
 				</div>
 			</template>
-		</div>
+		</div> -->
+
+		<!-- x-for (Loops) -->
+		<!-- <div x-data="{
+			posts: [{id: 1, title: 'Post 1'}, {id: 2, title: 'Post 2'}]
+		}">
+			<template x-for="post in posts" :key="post.id">
+				<h2 x-text="post.id + ' ' + post.title"></h2>
+			</template>
+		</div> -->
+
+		<!-- x-for in reange -->
+		<!-- <div x-data>
+			<template x-for="n in 10">
+				<p x-text="n"></p>
+			</template>
+		</div> -->
 
 	</body>
 </html>
