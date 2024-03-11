@@ -180,15 +180,38 @@
 
 
 		<!-- Challenge -->
-		<div x-data="{colors: ['red', 'green', 'blue', 'yellow', 'brown', 'purple']}">
+		<!-- <div x-data="{colors: ['red', 'green', 'blue', 'yellow', 'brown', 'purple']}"> -->
 			<!-- Iterate over colors and display 40x40 px boxes with given colors -->
-			<template x-for="color in colors">
+			<!-- <template x-for="color in colors">
 				<div 
 					style="width: 40px; height: 40px; display: inline-block;" 
 					x-bind:style="{backgroundColor: color}">
 				</div>
 			</template>
-		</div>
+		</div> -->
+
+
+		<!-- x-on  -->
+		<!-- <div x-data @scroll.window="console.log('Scroll')" @edit="console.log('edit was triggered')">
+			<button @click="console.log('Clicked 1', $event)">Clicked 1</button>
+			<input type="text" x-on:keyup.enter="console.log('keyup')">
+
+			<div x-data="{modal: false}">
+				<button @click="modal = true">Show Modal</button>
+				<div x-show="modal" @click.outside="modal = false">
+					Modal Content ...
+				</div>
+			</div>
+
+			<input type="text" @keyup.once="console.log('once')">
+			<input type="text" @keyup.debounce="console.log('debounce')">
+			<input type="text" @keyup.throttle="console.log('throttle')">
+
+
+			<button @click="$dispatch('edit')">Edit</button>
+
+		</div> -->
+
 
 
 
