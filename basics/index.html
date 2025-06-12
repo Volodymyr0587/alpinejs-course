@@ -214,10 +214,27 @@
 
 
 		<!-- x-model -->
-		<div x-data="{keyword: 'laptop'}">
+		<!-- <div x-data="{keyword: 'laptop'}">
 			<input type="text" x-model.debounce.500="keyword" placeholder="Search for items">
 			<p x-text="keyword"></p>
-		</div> 
+		</div>  -->
+
+
+		<!-- 
+		Challenge: Create a button and 3 inputs.
+		1st input for text. Whatever you write inside the input that should become the text of the button.
+		2nd input for background color. Whatever you type color inside the input and that will 
+		become button background color
+		3rd input for button id. Whatever you type inside that will become button id 
+		-->
+		<div x-data="{text: null, bg: null, id: null}">
+			<button :id="id" x-text="text" :style="{backgroundColor: bg}"></button>
+			<br>
+			<input type="text" x-model="text" placeholder="Text">
+			<input type="text" x-model="bg" placeholder="Background Color">
+			<input type="text" x-model="id" placeholder="ID">
+		</div>
+
 
 
 	</body>
