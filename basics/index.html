@@ -213,7 +213,11 @@
 		</div> -->
 
 
-
+		<!-- x-model -->
+		<div x-data="{keyword: 'laptop'}">
+			<input type="text" x-model.debounce.500="keyword" placeholder="Search for items">
+			<p x-text="keyword"></p>
+		</div> 
 
 
 	</body>
