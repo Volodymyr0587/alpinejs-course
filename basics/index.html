@@ -227,15 +227,21 @@
 		become button background color
 		3rd input for button id. Whatever you type inside that will become button id 
 		-->
-		<div x-data="{text: null, bg: null, id: null}">
+		<!-- <div x-data="{text: null, bg: null, id: null}">
 			<button :id="id" x-text="text" :style="{backgroundColor: bg}"></button>
 			<br>
 			<input type="text" x-model="text" placeholder="Text">
 			<input type="text" x-model="bg" placeholder="Background Color">
 			<input type="text" x-model="id" placeholder="ID">
+		</div> -->
+
+
+		<!-- x-effect -->
+		<div x-data="{name: 'Volodymyr', message: null}">
+			<p x-effect="console.log(name)"></p>
+			<p x-text="name"></p>
+			<button @click="name = 'John'">Change Name</button>
 		</div>
-
-
 
 	</body>
 
